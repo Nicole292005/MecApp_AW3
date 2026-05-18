@@ -8,7 +8,7 @@ Nicole Ramos
 ## Tecnologias utilizadas
 - Node.js
 - Express.js
-- MongoDB Atlas
+- MongoDB Local
 - Mongoose
 - Handlebars
 - Socket.io
@@ -36,16 +36,17 @@ git clone https://github.com/Nicole292005/MiInventarioExpres.git
 npm install
 ```
 
-3. Crear el archivo .env en la raiz con las siguientes variables
+3. Configuración (Opcional)
+El sistema utiliza valores por defecto para MongoDB local y el secreto de sesión. Si deseas cambiarlos, crea un archivo `.env` en la carpeta `backend` con:
 ```
-MONGODB_URI=
+MONGODB_URI=tu_uri_de_mongodb
 PUERTO=3000
-SECRETO_SESION=
+SECRETO_SESION=tu_clave_secreta
 ```
 
 4. Ejecutar la semilla para crear usuarios iniciales
 ```
-node semilla.js
+npm run seed
 ```
 
 5. Iniciar el servidor

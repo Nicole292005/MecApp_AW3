@@ -44,7 +44,7 @@ aplicacion.use('/uploads', express.static(ruta.join(__dirname, 'uploads')));
 
 // Configuración de sesión
 aplicacion.use(sesion({
-    secret: process.env.SECRETO_SESION,
+    secret: process.env.SECRETO_SESION || 'clave_secreta_por_defecto_123',
     resave: false,
     saveUninitialized: false
 }));

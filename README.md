@@ -11,7 +11,7 @@
 
 ## Descripción
 
-MercApp es una aplicación web de una sola página (SPA) desarrollada con Vue 3 que permite gestionar un catálogo de productos. Consume una API REST propia construida con Node.js y Express, y utiliza MongoDB Atlas como base de datos.
+MercApp es una aplicación web de una sola página (SPA) desarrollada con Vue 3 que permite gestionar un catálogo de productos. Consume una API REST propia construida con Node.js y Express, y utiliza MongoDB local como base de datos.
 
 ---
 
@@ -42,7 +42,7 @@ MercApp es una aplicación web de una sola página (SPA) desarrollada con Vue 3 
 ### Requisitos previos
 
 - Node.js v18 o superior
-- Conexión a internet (MongoDB Atlas)
+- MongoDB instalado y ejecutándose localmente (puerto 27017)
 
 ### 1. Instalar dependencias del backend
 

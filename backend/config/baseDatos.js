@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 
 const conectarBaseDatos = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI);
-        console.log('Conexión exitosa a la base de datos MongoDB');
+        const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mecapp';
+        await mongoose.connect(uri);
+        console.log(`Conexión exitosa a la base de datos MongoDB en ${uri}`);
     } catch (error) {
         console.error('Error al conectar con la base de datos:', error.message);
         process.exit(1);

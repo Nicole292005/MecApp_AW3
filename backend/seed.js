@@ -13,8 +13,9 @@ const categorias = [
 
 const poblarBaseDatos = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI);
-        console.log('Conectado a MongoDB Atlas');
+        const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mecapp';
+        await mongoose.connect(uri);
+        console.log(`Conectado a MongoDB en ${uri}`);
 
         // Limpiar colecciones existentes
         await Categoria.deleteMany({});
